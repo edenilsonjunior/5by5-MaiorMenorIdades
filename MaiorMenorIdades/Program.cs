@@ -10,7 +10,7 @@ for(int i = 1; i <= 10; i++)
     Console.Write($"Digite a idade da pessoa({i}): ");
     idade = int.Parse(Console.ReadLine());
 
-    if(idade <= 18)
+    if(idade < 18)
         nroMenores++;
     else
         nroMaiores++;
