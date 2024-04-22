@@ -7,8 +7,15 @@ Console.WriteLine("=====Maiores e Menores de Idade=====");
 
 for(int i = 1; i <= 10; i++)
 {
-    Console.Write($"Digite a idade da pessoa({i}): ");
-    idade = int.Parse(Console.ReadLine());
+    do
+    {
+        Console.Write($"Digite a idade da pessoa({i}): ");
+        idade = int.Parse(Console.ReadLine());
+
+        if(idade < 0 || idade > 100){
+            Console.WriteLine("Idade incorreta");
+        } 
+    } while (idade < 0 || idade > 100);
 
     if(idade < 18)
         nroMenores++;
